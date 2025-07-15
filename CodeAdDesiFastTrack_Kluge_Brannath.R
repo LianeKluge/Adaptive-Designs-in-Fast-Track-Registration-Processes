@@ -1388,7 +1388,7 @@ points(relativeI1vec_3, relativeI_2MinFisher3, type = 'l', col = "blue",
        lty=1, lwd=2)
 points(relativeI1vec_3, relativeI_2MinIN3, type = 'l', col = "black",lty=2,
        lwd=2)
-points(relativeI1vec_3, relativeI_2MinA_Z3, type = 'l', col = "purple",lty=2,
+points(relativeI1vec_3, relativeI_2MinA_Z3, type = 'l', col = "purple",lty=5,
        lwd=2)
 abline(v=0.1368, col="darkgrey", lwd=2, lty=1)
 abline(h = 1, col = "black")
@@ -1408,7 +1408,7 @@ legend(0.2, 2.52,  legend=c("separate studies", "inverse normal method",
                             expression(P[delta](Z[1]>=z[f])),
                             "gambling sep. studies"),
        col=c("red", "black", "blue", "purple", "darkgreen", "darkgrey"), 
-       lty=c(3,2,1,2,6,1), cex=1.25, lwd=c(2,2,2,2,2,2), text.width = 0.4)
+       lty=c(3,2,1,5,4,1), cex=1.25, lwd=c(2,2,2,2,2,2), text.width = 0.4)
 dev.off()
 ########   Plot of I_2,const/I_delta, i.e. t_xi(I_2,min):   ###################
 
@@ -1427,7 +1427,7 @@ points(relativeI1vec_3, relativeI_2ConstFisher3, type = 'l', col = "blue",
        lty=1, lwd=2)
 points(relativeI1vec_3, relativeI_2ConstIN3, type = 'l', col = "black",lty=2,
        lwd=2)
-points(relativeI1vec_3, relativeI_2ConstA_Z3, type = 'l', col = "purple",lty=2,
+points(relativeI1vec_3, relativeI_2ConstA_Z3, type = 'l', col = "purple",lty=5,
        lwd=2)
 abline(v=0.1368, col="darkgrey", lwd=2, lty=1)
 abline(h = 1, col = "black")
@@ -1447,7 +1447,7 @@ legend(0.25, 3.1,  legend=c("separate studies", "inverse normal method",
                             expression(P[delta](Z[1]>=z[f])),
                             "gambling sep. studies"),
        col=c("red", "black", "blue", "purple", "darkgreen", "darkgrey"), 
-       lty=c(3,2,1,2,6,1), cex=1.25, lwd=c(2,2,2,2,2,2), text.width = 0.38)
+       lty=c(3,2,1,5,4,1), cex=1.25, lwd=c(2,2,2,2,2,2), text.width = 0.38)
 dev.off()
 
 ########## Comparison of efficiency between the considered designs designs #####
@@ -1497,7 +1497,7 @@ par(mar = c(5, 4+2, 4, 2+2), mgp=c(4.1,1,0))
 plot(relativeI1vec_3, relativeMaxInformIN3, col = "black", type ='l', lty=2, 
      lwd=2, ylim=c(0,4.5), xlab = expression(t[xi](I[1])),  xaxt="n", yaxt="n",
      ylab=expression(t[xi](I[2*","*max])), cex.lab=1.7)
-axis(1, at= c(0,0.25,0.5,1,1.25))
+axis(1, at= c(0,0.2,0.4,0.6))
 axis(1, at=c(0.76), labels = c(expression(t[xi](I[1*","*max]))), cex.axis=1.4)
 axis(2, at= c(0,0.5,1,2,2.5,3.0,3.5,4,4.5), las=1)
 axis(2, at=c(1.5625), labels = c(expression(t[xi](I[rel]))), las=1, cex.axis=1.4)
@@ -1525,7 +1525,7 @@ legend(0.25, 2.3, legend=c("separate studies", "inverse normal method",
                            expression(P[delta](Z[1]>=z[f])),
                            "gambling sep. studies"),
        col=c("red", "black", "blue", "purple","darkgreen","darkgrey"),
-       lty=c(3,2,1,5,6,1), cex=1.25, lwd=c(2,2,2,2,2,2), text.width = 0.38)
+       lty=c(3,2,1,5,4,1), cex=1.25, lwd=c(2,2,2,2,2,2), text.width = 0.38)
 dev.off()
 
 ######### plot of relative mean information for the second stage: #############
@@ -1535,7 +1535,7 @@ par(mar = c(5, 4+2, 4, 2+2), mgp=c(4.1,1,0))
 plot(relativeI1vec_3, relativeMeanInformClas3, col = "red", type ='l', lty= 3,
      lwd=2, ylim=c(0,3.6), xlab = expression(t[xi](I[1])),  xaxt="n", yaxt="n",
      ylab=expression(t[xi](E(I[2]))), cex.lab=1.7)
-axis(1, at= c(0,0.25,0.5,1,1.25))
+axis(1, at= c(0,0.2,0.4,0.6))
 axis(1, at=c(0.76), labels = c(expression(t[xi](I[1*","*max]))), cex.axis=1.4)
 axis(2, at= c(0,0.5,1.0,2,2.5,3.0, 3.5),
      las=1)
@@ -1576,7 +1576,7 @@ plot(relativeI1vec_3, relativeMaxInformIN3+relativeI1vec_3, col = "black",
      type ='l', lty=2, lwd=2, ylim=c(1,4.5), xlab = expression(t[xi](I[1])),
      xaxt="n", yaxt="n", ylab=expression(t[xi](I[1])+t[xi](I[2*","*max])),
      cex.lab=1.7)
-axis(1, at= c(0,0.25,0.5,1,1.25))
+axis(1, at= c(0,0.2,0.4,0.6))
 axis(1, at=c(0.76), labels = c(expression(t[xi](I[1*","*max]))), cex.axis=1.4)
 axis(2, at= c(1.0,2,2.5,3.0,3.5,4.0,4.5),las=1)
 axis(2, at=c(1.5625), labels = c(expression(t[xi](I[rel]))), 
@@ -1616,7 +1616,7 @@ plot(relativeI1vec_3, relativeMeanInformClas3+relativeI1vec_3, col = "red",
      type ='l', xaxt="n", lty= 3, lwd=2, ylim=c(0.5,3.5),
      xlab = expression(t[xi](I[1])), cex.lab=1.7, yaxt="n",
      ylab=expression(t[xi](I[1])+t[xi](E(I[2]))))
-axis(1, at= c(0,0.25,0.5,1,1.25))
+axis(1, at= c(0,0.2,0.4,0.6))
 axis(1, at=c(0.76), labels = c(expression(t[xi](I[1*","*max]))), cex.axis=1.4)
 axis(2, at= c(0.5,1.0,2,2.5,3.0, 3.5), las=1)
 axis(2, at=c(1.5625), labels = c(expression(t[xi](I[rel]))),  cex.axis=1.4, las=1)
@@ -1654,7 +1654,7 @@ plot(relativeI1vec_3, pmax(relativeI_2MinIN3,maxSamSizeFormulaZTestIN3),
      col = "blue", type ='l', lty=2, lwd=2, xaxt="n", yaxt="n",
      ylim =c(0,3.0), xlab = expression(t[xi](I[1])), cex.lab=1.7,
      ylab=expression("information on " *t[xi]*" -scale"))
-axis(1, at= c(0,0.25,0.5,1,1.25))
+axis(1, at= c(0,0.2,0.4,0.6))
 axis(1, at=c(0.76), labels = c(expression(t[xi](I[1*","*max]))), cex.axis=1.4)
 axis(2, at= c(0,0.5,1.0,2,2.5,3.0), las=1)
 axis(2, at=c(1.5625), labels = c(expression(t[xi](I[rel]))), las=1,
@@ -1691,7 +1691,7 @@ plot(relativeI1vec_3, pmax(maxSamSizeFormulaZTestFisher3,relativeI_2MinFisher3),
      col = "blue", type ='l', lty=2, lwd=2, xaxt="n", yaxt="n",
       ylim =c(0,3.0), xlab = expression(t[xi](I[1])), cex.lab=1.7,
      ylab=expression("information on " * t[xi]*" -scale"))
-axis(1, at= c(0,0.25,0.5,1,1.25))
+axis(1, at= c(0,0.2,0.4,0.6))
 axis(1, at=c(0.76), labels = c(expression(t[xi](I[1*","*max]))), cex.axis=1.4)
 axis(2, at= c(0,0.5,1.0,2,2.5,3), las=1)
 axis(2, at=c(1.5625), labels = c(expression(t[xi](I[rel]))), las=1, 
@@ -1728,7 +1728,7 @@ plot(relativeI1vec_3, pmax(maxSamSizeFormulaZTestClas3,relativeI_2MinClas3),
      col = "blue", type ='l',, lty=2, lwd=2, xaxt="n", yaxt="n",
       ylim =c(0,3.0), xlab = expression(t[xi](I[1])), cex.lab=1.7,
      ylab=expression("information on " * t[xi]*" -scale"))
-axis(1, at= c(0,0.25,0.5,1,1.25))
+axis(1, at= c(0,0.2,0.4,0.6))
 axis(1, at=c(0.76), labels = c(expression(t[xi](I[1*","*max]))), cex.axis=1.4)
 axis(2, at= c(0,0.5,1.0,2,2.5,3.0), las=1)
 axis(2, at=c(1.5625), labels = c(expression(t[xi](I[rel]))), las=1,
@@ -1766,7 +1766,7 @@ plot(relativeI1vec_3, pmax(maxSamSizeFormulaZTestA_Z3,relativeI_2MinA_Z3),
      col = "blue", type ='l', lty=2, lwd=2, xaxt="n", yaxt="n",
      ylim =c(0,3.0), xlab = expression(t[xi](I[1])), cex.lab=1.7,
      ylab=expression("information on " *t[xi]*" -scale"))
-axis(1, at= c(0,0.25,0.5,1,1.25))
+axis(1, at= c(0,0.2,0.4,0.6))
 axis(1, at=c(0.76), labels = c(expression(t[xi](I[1*","*max]))), cex.axis=1.4)
 axis(2, at= c(0,0.5,1.0,2,2.5,3.0), las=1)
 axis(2, at=c(1.5625), labels = c(expression(t[xi](I[rel]))), las=1,
@@ -1916,7 +1916,7 @@ points(relativeI1vec_4, relativeI_2MinFisher4, type = 'l', col = "blue",
        lty=1, lwd=2)
 points(relativeI1vec_4, relativeI_2MinIN4, type = 'l', col = "black",lty=2,
        lwd=2)
-points(relativeI1vec_4, relativeI_2MinA_Z4, type = 'l', col = "purple",lty=2,
+points(relativeI1vec_4, relativeI_2MinA_Z4, type = 'l', col = "purple",lty=5,
        lwd=2)
 abline(v=0.1368, col="darkgrey", lwd=2, lty=1)
 abline(h = 1, col = "black")
@@ -1936,7 +1936,7 @@ legend(0.3, 2.52,  legend=c("separate studies", "inverse normal method",
                             expression(P[delta](Z[1]>=z[f])),
                             "gambling sep. studies"),
        col=c("red", "black", "blue", "purple", "darkgreen", "darkgrey"), 
-       lty=c(3,2,1,2,6,1), cex=1.25, lwd=c(2,2,2,2,2,2), text.width = 0.5)
+       lty=c(3,2,1,5,4,1), cex=1.25, lwd=c(2,2,2,2,2,2), text.width = 0.5)
 dev.off()
 ########   Plot of I_2,const/I_delta, i.e. t_xi(I_2,min):   ###################
 
@@ -1956,7 +1956,7 @@ points(relativeI1vec_4, relativeI_2ConstFisher4, type = 'l', col = "blue",
        lty=1, lwd=2)
 points(relativeI1vec_4, relativeI_2ConstIN4, type = 'l', col = "black",lty=2,
        lwd=2)
-points(relativeI1vec_4, relativeI_2ConstA_Z4, type = 'l', col = "purple",lty=2,
+points(relativeI1vec_4, relativeI_2ConstA_Z4, type = 'l', col = "purple",lty=5,
        lwd=2)
 abline(v=0.1368, col="darkgrey", lwd=2, lty=1)
 abline(h = 1, col = "black")
@@ -1976,7 +1976,7 @@ legend(0.35, 3.2,  legend=c("separate studies", "inverse normal method",
                             expression(P[delta](Z[1]>=z[f])),
                             "gambling sep. studies"),
        col=c("red", "black", "blue", "purple", "darkgreen", "darkgrey"), 
-       lty=c(3,2,1,2,6,1), cex=1.25, lwd=c(2,2,2,2,2,2), text.width = 0.5)
+       lty=c(3,2,1,5,4,1), cex=1.25, lwd=c(2,2,2,2,2,2), text.width = 0.5)
 dev.off()
 
 
@@ -2184,13 +2184,13 @@ dev.off()
 png("NonBindingMaxInformationSplit_1.43InverseNormal.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4,1,0))
 plot(relativeI1vec_4, pmax(maxSamSizeFormulaZTestIN4, relativeI_2MinIN4),
-     col = "blue", type ='l', lty=2, lwd=2, ylim =c(0,3.5),
+     col = "blue", type ='l', lty=2, lwd=2, ylim =c(0,4),
      xlab = expression(t[xi](I[1])), cex.lab=1.7,
      ylab=expression("information on " *t[xi]*" -scale"),xaxt="n", yaxt="n")
 axis(1, at= c(0,0.2,0.4,0.6,0.8))
 axis(1, at=c(1,1.43^2), labels = c(expression(t[xi](I[1*","*max])),
                                    expression(t[xi](I[rel]))), cex.axis=1.4)
-axis(2, at= c(seq(0,1.5,by=0.5),c(2.5,3,3.5)), las=1)
+axis(2, at= c(seq(0,1.5,by=0.5),c(2.5,3,3.5,4)), las=1)
 axis(2, at=c(1.43^2), labels = c(expression(t[xi](I[rel]))), las=1, cex.axis=1.4)
 points(relativeI1vec_4, relativeI_2MinIN4, col = "black", type ='l', 
        lty=1, lwd=2)
@@ -2203,10 +2203,10 @@ probCondRegistr <-
           -sqrt(relativeI1vec_4)*eta_f)
 par(new=TRUE)
 plot(relativeI1vec_4, probCondRegistr, type='l', lwd=2, lty=4, col="darkgreen",
-     axes=FALSE, ylim=c(0,1.75), xlab="", ylab="")
+     axes=FALSE, ylim=c(0,2), xlab="", ylab="")
 axis(side=4, at = seq(0,1, by=0.1), col="darkgreen", col.axis="darkgreen", las=1)
 mtext("Power conditional registration", side=4, line=3, col="darkgreen", cex=1.3)
-legend(0.02, 1.75, legend=c(expression(t[xi](I[2*","*min])),
+legend(0.02, 2, legend=c(expression(t[xi](I[2*","*min])),
                             expression(t[xi](I[2](z[f]))),
                             expression(t[xi](I[2*", const"])), 
                             expression(P[delta](Z[1]>=z[f]))),
@@ -2218,13 +2218,13 @@ dev.off()
 png("NonBindingMaxInformationSplit_1.43Fisher.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4,1,0))
 plot(relativeI1vec_4, pmax(maxSamSizeFormulaZTestFisher4, relativeI_2MinFisher4), 
-     col = "blue", type ='l', lty=2, lwd=2, ylim =c(0,3.5), 
+     col = "blue", type ='l', lty=2, lwd=2, ylim =c(0,4), 
      xlab = expression(t[xi](I[1])), cex.lab=1.7,
      ylab=expression("information on " * t[xi]*" -scale"),xaxt="n", yaxt="n")
 axis(1, at= c(0,0.2,0.4,0.6,0.8))
 axis(1, at= c(1,1.43^2), labels = c(expression(t[xi](I[1*","*max])),
                                     expression(t[xi](I[rel]))), cex.axis=1.4)
-axis(2, at= c(seq(0,1.5,by=0.5),c(2.5,3, 3.5)), las=1)
+axis(2, at= c(seq(0,1.5,by=0.5),c(2.5,3, 3.5,4)), las=1)
 axis(2, at=c(1.43^2), labels = c(expression(t[xi](I[rel]))), las=1, cex.axis=1.4)
 points(relativeI1vec_4, relativeI_2MinFisher4, col = "black", type ='l', 
        lty=1, lwd=2)
@@ -2237,10 +2237,10 @@ probCondRegistr <-
           -sqrt(relativeI1vec_4)*eta_f)
 par(new=TRUE)
 plot(relativeI1vec_4, probCondRegistr, type='l', lwd=2, lty=4, col="darkgreen",
-     axes=FALSE, ylim=c(0,1.75), xlab="", ylab="")
+     axes=FALSE, ylim=c(0,2), xlab="", ylab="")
 axis(side=4, at = seq(0,1, by=0.1), col="darkgreen", col.axis="darkgreen", las=1)
 mtext("Power conditional registration", side=4, line=3, col="darkgreen", cex=1.3)
-legend(0, 1.75, legend=c(expression(t[xi](I[2*","*min])),
+legend(0, 2, legend=c(expression(t[xi](I[2*","*min])),
                          expression(t[xi](I[2](z[f]))), 
                          expression(t[xi](I[2*", const"])), 
                          expression(P[delta](Z[1]>=z[f]))),
@@ -2290,11 +2290,11 @@ png("NonBindingMaxInformationSplit_1.43INChangingWeights_A_Z.png", width = 2000,
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4,1,0))
 plot(relativeI1vec_4, pmax(maxSamSizeFormulaZTestA_Z4,relativeI_2MinA_Z4),
      col = "blue", type ='l', lty=2, lwd=2, xaxt="n", yaxt="n",
-     ylim =c(0,3.0), xlab = expression(t[xi](I[1])), cex.lab=1.7,
+     ylim =c(0,4), xlab = expression(t[xi](I[1])), cex.lab=1.7,
      ylab=expression("information on " *t[xi]*" -scale"))
-axis(1, at= c(0,0.25,0.5,0.75))
+axis(1, at= c(0,0.2,0.4,0.6,0.8))
 axis(1, at=c(1), labels = c(expression(t[xi](I[1*","*max]))), cex.axis=1.4)
-axis(2, at= c(0,0.5,1.0,1.5,2.5,3.0), las=1)
+axis(2, at= c(0,0.5,1.0,1.5,2.5,3.0,3.5,4), las=1)
 axis(2, at=c(1.43^2), labels = c(expression(t[xi](I[rel]))), las=1,
      cex.axis=1.4)
 points(relativeI1vec_4, relativeI_2MinA_Z4, col = "black", type ='l', lty=1,
@@ -2308,12 +2308,12 @@ probCondRegistr <-
           -sqrt(relativeI1vec_4)*eta_f)
 par(new=TRUE)
 plot(relativeI1vec_4, probCondRegistr, type='l', lwd=2, lty=4, col="darkgreen",
-     axes=FALSE, ylim=c(0,1.5), xlab="", ylab="")
+     axes=FALSE, ylim=c(0,2), xlab="", ylab="")
 axis(side=4, at = seq(0,1, by=0.1), col="darkgreen", col.axis="darkgreen",
      las=1)
 mtext("Power conditional registration", side=4, line=3, col="darkgreen", 
       cex=1.3)
-legend(0.1, 1.52, legend=c(expression(t[xi](I[2*","*min])),
+legend(0.1, 2, legend=c(expression(t[xi](I[2*","*min])),
                           expression(t[xi](I[2](z[f]))) , 
                           expression(t[xi](I[2*", const"])),
                           expression(P[delta](Z[1]>=z[f]))),
