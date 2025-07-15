@@ -1,7 +1,7 @@
 # Code for plots of Paper 
 # "Adaptive Designs in Fast-Track Registration Processes"
 
-# authors: Liane Kluge und Werner Brannath
+# authors: Liane Kluge and Werner Brannath
 
 # PLEASE NOTE: To ensure that the paper contains accurate diagrams,
 # the step size was often set to a small value. This means that the numerical
