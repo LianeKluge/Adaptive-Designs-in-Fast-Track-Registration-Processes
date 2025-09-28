@@ -5,9 +5,9 @@
 
 # PLEASE NOTE: To ensure that the paper contains accurate diagrams,
 # the step size was often set to a small value. This means that the numerical
-# calculations take some time. To obtain results more quickly,
-# please reduce the step sizes! This applies in particular to the vectors
-# relativeI1vec_1 to relativeI1vec_6.
+# calculations take some time. For relativeI1vec_1 to relativeI1vec_6 the 
+# step size was set to "by=0.0001". To obtain results more quickly, in this
+# code it was set "by=0.01"!!!
 
 # PLEASE NOTE: When running the code, images are saved in the current working 
 # directory!
@@ -948,7 +948,7 @@ relativeI_2MinFisher1 <- determinationI_2Min(relativeI1vec_1, p_1_1, xi_1, A_F,
 
 ########   Plot of I_2,min/I_delta, i.e. t_xi(I_2,min):   #####################
 
-png("BindFutiliMinInform_2.png", width = 2000, height = 1500, res = 300)
+png("2_BindFutiliMinInform.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_1, relativeI_2MinClas1, type = 'l', col = "red", lty= 3, lwd=2,
      xlab = expression(t[xi](I[1])), ylab=expression(t[xi](I[2*","*min])),
@@ -998,7 +998,7 @@ relativeMaxInformClas1 <- efficiencyResultClas1$relativeMaxInform
 
 ######### plot of relative mean information for the second stage: ###########
 
-png("BindFutilMeanInformSeconStage_2.png", width = 2000, height = 1500, res = 300)
+png("2_BindFutilMeanInformSeconStage.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_1, relativeMeanInformClas1, col = "red", type ='l', lty= 3,
      lwd=2, ylim=c(0,3), xlab = expression(t[xi](I[1])),
@@ -1020,7 +1020,7 @@ dev.off()
 
 
 ######### plot of relative maximum information for the second stage: ###########
-png("BindFutilMaxInformSeconStage_2.png", width = 2000, height = 1500, res = 300)
+png("2_BindFutilMaxInformSeconStage.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_1, relativeMaxInformClas1, col = "red", type ='l', lty= 3,
      lwd=2, ylim =c(0,5), xlab = expression(t[xi](I[1])), cex.lab=1.7,
@@ -1042,7 +1042,7 @@ dev.off()
 
 
 ######### plot of relative mean information over both stage: ###########
-png("BindFutilMeanInformBothStages_2.png", width = 2000, height = 1500, res = 300)
+png("2_BindFutilMeanInformBothStages.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_1, relativeMeanInformClas1+relativeI1vec_1, col = "red",
      type ='l', lty= 3, lwd=2, ylim=c(0.75,3.75),
@@ -1065,7 +1065,7 @@ dev.off()
 
 
 ######### plot of relative maximum information over both stages: ###########
-png("BindFutilMaxInformBothStages_2.png", width = 2000, height = 1500, res = 300)
+png("2_BindFutilMaxInformBothStages.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_1, relativeMaxInformClas1+relativeI1vec_1, col = "red",
      type ='l', lty= 3, lwd=2, ylim =c(1,6), xlab = expression(t[xi](I[1])),
@@ -1134,7 +1134,7 @@ relativeI_2MinFisher2 <- determinationI_2Min(relativeI1vec_2, p_1_2, xi_2, A_F,
 
 ########   Plot of I_2,min/I_delta, i.e. t_xi(I_2,min):   #####################
 
-png("BindFutiliMinInform1.75.png", width = 2000, height = 1500, res = 300)
+png("1.75_BindFutiliMinInform.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_2, relativeI_2MinClas2, type = 'l', col = "red", lty= 3,
      lwd=2, xaxt="n", xlab = expression(t[xi](I[1])), 
@@ -1180,7 +1180,7 @@ relativeMaxInformClas2 <- efficiencyResultClas2$relativeMaxInform
 
 ######### plot of relative mean information for the second stage: ###########
 
-png("BindFutilMeanInformSeconStage_1.75.png", width = 2000, height = 1500, res = 300)
+png("1.75_BindFutilMeanInformSeconStage.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_2, relativeMeanInformClas2, col = "red", type ='l', lty= 3, 
      lwd=2, ylim=c(0,3), xlab = expression(t[xi](I[1])), xaxt="n",
@@ -1202,7 +1202,7 @@ dev.off()
 
 ######### plot of relative maximum information for the second stage: ###########
 
-png("BindFutilMaxInformSeconStage_1.75.png", width = 2000, height = 1500, res = 300)
+png("1.75_BindFutilMaxInformSeconStage.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_2, relativeMaxInformIN2, col = "black", type ='l', lty=2,
      lwd=2, ylim =c(0,5), xlab = expression(t[xi](I[1])), cex.lab=1.7, xaxt="n",
@@ -1224,7 +1224,7 @@ dev.off()
 
 ############ plot of relative mean information over both stage: ###############
 
-png("BindFutilMeanInformBothStages_1.75.png", width = 2000, height = 1500, res = 300)
+png("1.75_BindFutilMeanInformBothStages.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_2, relativeMeanInformClas2+relativeI1vec_2, col = "red", 
      type ='l', lty= 3, lwd=2,  ylim=c(0.75,3.75),
@@ -1247,7 +1247,7 @@ dev.off()
 
 ######### plot of relative maximum information over both stages: ###########
 
-png("BindFutilMaxInformBothStages_1.75.png", width = 2000, height = 1500, res = 300)
+png("1.75_BindFutilMaxInformBothStages.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_2, relativeMaxInformIN2+relativeI1vec_2, col = "black",
      type ='l', lty=2, lwd=2, ylim =c(1.5,6),
@@ -1374,7 +1374,7 @@ relativeI_2MinA_Z3 <- determinationI_2Min(relativeI1vec_3, p_1_3, xi_3, A_Z,
 
 ########   Plot of I_2,min/I_delta, i.e. t_xi(I_2,min):   #####################
 
-png("NonBindingMinInformSecondStage_1.25.png", width = 2000, height = 1500, res = 300)
+png("1.25_NonBindingMinInformSecondStage.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.8,1,0))
 plot(relativeI1vec_3, relativeI_2MinClas3, type = 'l', col = "red", lty=3,lwd=2,
      xlab = expression(t[xi](I[1])), ylab=expression(t[xi](I[2*","*min])),
@@ -1412,7 +1412,7 @@ legend(0.2, 2.52,  legend=c("separate studies", "inverse normal method",
 dev.off()
 ########   Plot of I_2,const/I_delta, i.e. t_xi(I_2,min):   ###################
 
-png("NonBindingConstInform_1.25.png", width = 2000, height = 1500, res = 300)
+png("1.25_NonBindingConstInform.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4,1,0))
 plot(relativeI1vec_3, relativeI_2ConstClas3, type = 'l', col = "red", lty=3,
      lwd=2, xlab = expression(t[xi](I[1])),
@@ -1492,7 +1492,7 @@ maxSamSizeFormulaZTestA_Z3 <- efficiencyResultA_Z3$maxSamSizeFormulaZTest
 
 
 ######### plot of relative maximum information for the second stage: ###########
-png("NonBindFutilMaxInformSeconStage_1.25.png", width = 2000, height = 1500, res = 300)
+png("1.25_NonBindFutilMaxInformSeconStage.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4.1,1,0))
 plot(relativeI1vec_3, relativeMaxInformIN3, col = "black", type ='l', lty=2, 
      lwd=2, ylim=c(0,4.5), xlab = expression(t[xi](I[1])),  xaxt="n", yaxt="n",
@@ -1530,7 +1530,7 @@ dev.off()
 
 ######### plot of relative mean information for the second stage: #############
 
-png("NonBindingMeanInformSecondStage_1.25.png", width = 2000, height = 1500, res = 300)
+png("1.25_NonBindingMeanInformSecondStage.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4.1,1,0))
 plot(relativeI1vec_3, relativeMeanInformClas3, col = "red", type ='l', lty= 3,
      lwd=2, ylim=c(0,3.6), xlab = expression(t[xi](I[1])),  xaxt="n", yaxt="n",
@@ -1570,7 +1570,7 @@ dev.off()
 
 ######### plot of relative maximum information over both stages: ##############
 
-png("NonBindFutilMaxInformBothStages_1.25.png", width = 2000, height = 1500, res = 300)
+png("1.25_NonBindFutilMaxInformBothStages.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4,1,0))
 plot(relativeI1vec_3, relativeMaxInformIN3+relativeI1vec_3, col = "black",
      type ='l', lty=2, lwd=2, ylim=c(1,4.5), xlab = expression(t[xi](I[1])),
@@ -1610,7 +1610,7 @@ dev.off()
 
 
 ######### plot of relative mean information over both stages: #################
-png("NonBindingMeanInformBothStages_1.25.png", width = 2000, height = 1500, res = 300)
+png("1.25_NonBindingMeanInformBothStages.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4.1,1,0))
 plot(relativeI1vec_3, relativeMeanInformClas3+relativeI1vec_3, col = "red",
      type ='l', xaxt="n", lty= 3, lwd=2, ylim=c(0.5,3.5),
@@ -1648,7 +1648,7 @@ dev.off()
 
 ###################### Inverse-Normal method: ##################################
 
-png("NonBindingMaxInformationSplit_1.25InverseNormal.png", width = 2000, height = 1500, res = 300)
+png("1.25_NonBindingMaxInformationSplit_InverseNormal.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4,1,0))
 plot(relativeI1vec_3, pmax(relativeI_2MinIN3,maxSamSizeFormulaZTestIN3),
      col = "blue", type ='l', lty=2, lwd=2, xaxt="n", yaxt="n",
@@ -1685,7 +1685,7 @@ dev.off()
 
 
 #################### Fisher's product test: ###################################
-png("NonBindingMaxInformationSplit_1.25Fisher.png", width = 2000, height = 1500, res = 300)
+png("1.25_NonBindingMaxInformationSplit_Fisher.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4,1,0))
 plot(relativeI1vec_3, pmax(maxSamSizeFormulaZTestFisher3,relativeI_2MinFisher3),
      col = "blue", type ='l', lty=2, lwd=2, xaxt="n", yaxt="n",
@@ -1722,7 +1722,7 @@ dev.off()
 
 
 ################### design with two separate studies: #########################
-png("NonBindingMaxInformationSplit_1.25NonAdaptive.png", width = 2000, height = 1500, res = 300)
+png("1.25_NonBindingMaxInformationSplit_NonAdaptive.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4,1,0))
 plot(relativeI1vec_3, pmax(maxSamSizeFormulaZTestClas3,relativeI_2MinClas3),
      col = "blue", type ='l',, lty=2, lwd=2, xaxt="n", yaxt="n",
@@ -1760,7 +1760,7 @@ legend(0.2, 1.6, legend=c(expression(t[xi](I[2*","*min])),
 dev.off()
 
 ############ inverse normal method with changing weights; A_Z: #################
-png("NonBindingMaxInformationSplit_1.25INChangingWeights_A_Z.png", width = 2000, height = 1500, res = 300)
+png("1.25_NonBindingMaxInformationSplit_INChangingWeights_A_Z.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4,1,0))
 plot(relativeI1vec_3, pmax(maxSamSizeFormulaZTestA_Z3,relativeI_2MinA_Z3),
      col = "blue", type ='l', lty=2, lwd=2, xaxt="n", yaxt="n",
@@ -1800,7 +1800,7 @@ dev.off()
 xi_4 = 1.43
 alpha_c <- 0.15
 rel_I1_max_xi_4 <- determine_I1max(xi_4, alpha)
-relativeI1vec_4 <- seq(1/10^6, rel_I1_max_xi_4-1/10^6, by = 0.0001)
+relativeI1vec_4 <- seq(1/10^6, rel_I1_max_xi_4-1/10^6, by = 0.01)
 numI1_4 <- length(relativeI1vec_4)
 
 # set important boundaries:
@@ -1853,7 +1853,7 @@ relativeI_2ConstFisher4 <- determination_I_2Const(p_2_4, A_F, c_AF4,
                                                   tolBisecDeterm_I_2Const,
                                                   stabConstIntegral)
 
-relativeI_2ConstClas4 <- rep(1, numI1_3) # follows from the definition
+relativeI_2ConstClas4 <- rep(1, numI1_4) # follows from the definition
 # of I_2,const/I_delta for the design with separate studies
 
 relativeI_2ConstA_Z4 <- determination_I_2Const(p_2_4, A_Z, c_A=alpha,
@@ -1901,7 +1901,7 @@ relativeI_2MinA_Z4<- determinationI_2Min(relativeI1vec_4, p_1_4, xi_4, A_Z,
 
 ########   Plot of I_2,min/I_delta, i.e. t_xi(I_2,min):   #####################
 
-png("NonBindingMinInformSecondStage_1.43.png", width = 2000, height = 1500, res = 300)
+png("Supplement_1.43_NonBindingMinInformSecondStage.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_4, relativeI_2MinClas4, type = 'l', col = "red", lty=3,lwd=2,
      xlab = expression(t[xi](I[1])), ylab=expression(t[xi](I[2*","*min])),
@@ -1940,7 +1940,7 @@ legend(0.3, 2.52,  legend=c("separate studies", "inverse normal method",
 dev.off()
 ########   Plot of I_2,const/I_delta, i.e. t_xi(I_2,min):   ###################
 
-png("ConstInformNonBinding_1.43.png", width = 2000, height = 1500, res = 300)
+png("Supplement_1.43_ConstInformNonBinding.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4,1,0))
 plot(relativeI1vec_4, relativeI_2ConstClas4, type = 'l', col = "red", lty=3,
      lwd=2, xlab = expression(t[xi](I[1])),
@@ -2023,7 +2023,7 @@ maxSamSizeFormulaZTestA_Z4 <- efficiencyResultA_Z4$maxSamSizeFormulaZTest
 
 
 ######### plot of relative maximum information for the second stage: ##########
-png("NonBindingMaxInformationSecondStage_1.43.png", width = 2000, height = 1500, res = 300)
+png("Supplement_1.43_NonBindingMaxInformationSecondStage.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4.1,1,0))
 plot(relativeI1vec_4, relativeMaxInformIN4, col = "black", type ='l', lty=2, 
      lwd=2, ylim=c(0,4.5), xlab = expression(t[xi](I[1])), yaxt="n", xaxt="n",
@@ -2063,7 +2063,7 @@ dev.off()
 
 ######### plot of relative mean information for the second stage: #############
 
-png("NonBindingMeanInformSecondStage_1.43.png", width = 2000, height = 1500, res = 300)
+png("Supplement_1.43_NonBindingMeanInformSecondStage.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4.1,1,0))
 plot(relativeI1vec_4, relativeMeanInformClas4, col = "red", type ='l', lty= 3,
      lwd=2, ylim=c(0,3.5), xlab = expression(t[xi](I[1])),  yaxt="n", xaxt="n",
@@ -2102,7 +2102,7 @@ dev.off()
 
 ######### plot of relative maximum information over both stages: ##############
 
-png("NonBindFutilMaxInformBothStages_1.43.png", width = 2000, height = 1500, res = 300)
+png("Supplement_1.43_NonBindFutilMaxInformBothStages.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4,1,0))
 plot(relativeI1vec_4, relativeMaxInformIN4+relativeI1vec_4, col = "black", 
      type ='l', lty=2, lwd=2, ylim=c(1,4.5), xlab = expression(t[xi](I[1])),
@@ -2140,7 +2140,7 @@ dev.off()
 
 
 ######### plot of relative mean information over both stages: ##############
-png("NonBindingMeanInformBothStages_1.43.png", width = 2000, height = 1500, res = 300)
+png("Supplement_1.43_NonBindingMeanInformBothStages.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4,1,0))
 plot(relativeI1vec_4, relativeMeanInformClas4+relativeI1vec_4, col = "red", 
      type ='l', xaxt="n", lty= 3, lwd=2, ylim=c(0.5,3.5), 
@@ -2181,7 +2181,7 @@ dev.off()
 ############# Detailed plot for each design: ##################################
 
 ###################### Inverse-Normal method: ##################################
-png("NonBindingMaxInformationSplit_1.43InverseNormal.png", width = 2000, height = 1500, res = 300)
+png("Supplement_1.43_NonBindingMaxInformationSplit_InverseNormal.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4,1,0))
 plot(relativeI1vec_4, pmax(maxSamSizeFormulaZTestIN4, relativeI_2MinIN4),
      col = "blue", type ='l', lty=2, lwd=2, ylim =c(0,4),
@@ -2215,7 +2215,7 @@ legend(0.02, 2, legend=c(expression(t[xi](I[2*","*min])),
 dev.off()
 
 ##################### Fisher's product test: ##################################
-png("NonBindingMaxInformationSplit_1.43Fisher.png", width = 2000, height = 1500, res = 300)
+png("Supplement_1.43_NonBindingMaxInformationSplit_Fisher.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4,1,0))
 plot(relativeI1vec_4, pmax(maxSamSizeFormulaZTestFisher4, relativeI_2MinFisher4), 
      col = "blue", type ='l', lty=2, lwd=2, ylim =c(0,4), 
@@ -2250,7 +2250,7 @@ dev.off()
 
 
 ################### design with two separate studies: #########################
-png("NonBindingMaxInformationSplit_1.43NonAdaptive.png", width = 2000, height = 1500, res = 300)
+png("Supplement_1.43_NonBindingMaxInformationSplit_NonAdaptive.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4,1,0))
 plot(relativeI1vec_4, pmax(maxSamSizeFormulaZTestClas4,relativeI_2MinClas4),
      col = "blue", type ='l', lty=2, lwd=2, ylim =c(0,4),
@@ -2286,7 +2286,7 @@ legend(0.25, 2.1, legend=c(expression(t[xi](I[2*","*min])),
 dev.off()
 
 ############ inverse normal method with changing weights; A_Z: #################
-png("NonBindingMaxInformationSplit_1.43INChangingWeights_A_Z.png", width = 2000, height = 1500, res = 300)
+png("Supplement_1.43_NonBindingMaxInformationSplit_INChangingWeights_A_Z.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(4,1,0))
 plot(relativeI1vec_4, pmax(maxSamSizeFormulaZTestA_Z4,relativeI_2MinA_Z4),
      col = "blue", type ='l', lty=2, lwd=2, xaxt="n", yaxt="n",
@@ -2390,7 +2390,7 @@ relativeI_2MinFisher5 <- determinationI_2Min(relativeI1vec_5, p_1_5, xi_5, A_F,
 
 ########   Plot of I_2,min/I_delta, i.e. t_xi(I_2,min):   #####################
 
-png("NonBindFutiliMinInform_1.75.png", width = 2000, height = 1500, res = 300)
+png("Supplement_1.75_NonBindFutiliMinInform.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_5, relativeI_2MinClas5, type = 'l', col = "red", lty= 3,
      lwd=2, xaxt="n", xlab = expression(t[xi](I[1])), 
@@ -2436,7 +2436,7 @@ relativeMaxInformClas5 <- efficiencyResultClas5$relativeMaxInform
 
 ######### plot of relative mean information for the second stage: ###########
 
-png("NonBindFutilMeanInformSeconStage_1.75.png", width = 2000, height = 1500, res = 300)
+png("Supplement_1.75_NonBindFutilMeanInformSeconStage.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_5, relativeMeanInformClas5, col = "red", type ='l', lty= 3, 
      lwd=2, ylim=c(0,3), xlab = expression(t[xi](I[1])), xaxt="n",
@@ -2458,7 +2458,7 @@ dev.off()
 
 ######### plot of relative maximum information for the second stage: ###########
 
-png("NonBindFutilMaxInformSeconStage_1.75.png", width = 2000, height = 1500, res = 300)
+png("Supplement_1.75_NonBindFutilMaxInformSeconStage.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_5, relativeMaxInformIN5, col = "black", type ='l', lty=2,
      lwd=2, ylim =c(0,5), xlab = expression(t[xi](I[1])), cex.lab=1.7, xaxt="n",
@@ -2480,7 +2480,7 @@ dev.off()
 
 ############ plot of relative mean information over both stage: ###############
 
-png("NonBindFutilMeanInformBothStages_1.75.png", width = 2000, height = 1500, res = 300)
+png("Supplement_1.75_NonBindFutilMeanInformBothStages.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_5, relativeMeanInformClas5+relativeI1vec_5, col = "red", 
      type ='l', lty= 3, lwd=2,  ylim=c(0.75,3.75),
@@ -2503,7 +2503,7 @@ dev.off()
 
 ######### plot of relative maximum information over both stages: ###########
 
-png("NonBindFutilMaxInformBothStages_1.75.png", width = 2000, height = 1500, res = 300)
+png("Supplement_1.75_NonBindFutilMaxInformBothStages.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_5, relativeMaxInformIN5+relativeI1vec_5, col = "black",
      type ='l', lty=2, lwd=2, ylim =c(1.5,6),
@@ -2580,7 +2580,7 @@ relativeI_2MinFisher6 <- determinationI_2Min(relativeI1vec_6, p_1_6, xi_6, A_F,
 
 ########   Plot of I_2,min/I_delta, i.e. t_xi(I_2,min):   #####################
 
-png("NonBindFutiliMinInform_2.png", width = 2000, height = 1500, res = 300)
+png("Supplement_2_NonBindFutiliMinInform.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_6, relativeI_2MinClas6, type = 'l', col = "red", lty= 3, lwd=2,
      xlab = expression(t[xi](I[1])), ylab=expression(t[xi](I[2*","*min])),
@@ -2630,7 +2630,7 @@ relativeMaxInformClas6 <- efficiencyResultClas6$relativeMaxInform
 
 ######### plot of relative mean information for the second stage: ###########
 
-png("NonBindFutilMeanInformSeconStage_2.png", width = 2000, height = 1500, res = 300)
+png("Supplement_2_NonBindFutilMeanInformSeconStage.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_6, relativeMeanInformClas6, col = "red", type ='l', lty= 3,
      lwd=2, ylim=c(0,3), xlab = expression(t[xi](I[1])),
@@ -2652,7 +2652,7 @@ dev.off()
 
 
 ######### plot of relative maximum information for the second stage: ###########
-png("NonBindFutilMaxInformSeconStage_2.png", width = 2000, height = 1500, res = 300)
+png("Supplement_2_NonBindFutilMaxInformSeconStage.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_6, relativeMaxInformClas6, col = "red", type ='l', lty= 3,
      lwd=2, ylim =c(0,5), xlab = expression(t[xi](I[1])), cex.lab=1.7,
@@ -2674,7 +2674,7 @@ dev.off()
 
 
 ######### plot of relative mean information over both stage: ###########
-png("NonBindFutilMeanInformBothStages_2.png", width = 2000, height = 1500, res = 300)
+png("Supplement_2_NonBindFutilMeanInformBothStages.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_6, relativeMeanInformClas6+relativeI1vec_6, col = "red",
      type ='l', lty= 3, lwd=2, ylim=c(0.75,3.75),
@@ -2697,7 +2697,7 @@ dev.off()
 
 
 ######### plot of relative maximum information over both stages: ###########
-png("NonBindFutilMaxInformBothStages_2.png", width = 2000, height = 1500, res = 300)
+png("Supplement_2_NonBindFutilMaxInformBothStages.png", width = 2000, height = 1500, res = 300)
 par(mar = c(5, 4+2, 4, 2+2), mgp=c(3.5,1,0))
 plot(relativeI1vec_6, relativeMaxInformClas6+relativeI1vec_6, col = "red",
      type ='l', lty= 3, lwd=2, ylim =c(1,6), xlab = expression(t[xi](I[1])),
